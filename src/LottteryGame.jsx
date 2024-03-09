@@ -4,14 +4,14 @@ import { genTicket, sum } from "./helper";
 import Ticket from "./Ticket";
 
 export default function LotteryGame({ n = 3, winningSum = 15 }) {
-  let [ticket, setTicket] = useState(genTicket({ n }));
+  let [ticket, setTicket] = useState(genTicket(n));
   let isWinning = sum(ticket) === winningSum;
 
   //   let getNewTicket = () => {
   //     number = number.
   //   };
   let ticketButton = () => {
-    setTicket(genTicket({ n }));
+    setTicket(genTicket(n));
   };
   console.log(ticket);
 
